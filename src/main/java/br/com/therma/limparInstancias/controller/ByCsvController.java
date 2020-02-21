@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import br.com.therma.limparInstacias.model.ByCsv;
+import br.com.therma.limparInstacias.model.EMMA_COBJECTs;
 import br.com.therma.limparInstacias.model.LocationResultDTO;
 import br.com.therma.limparInstacias.model.MeterReadings;
 import br.com.therma.limparInstacias.model.Meters;
@@ -77,13 +78,12 @@ public class ByCsvController {
 		List<StartAutoMainCall> startAutoMainCalls = new ArrayList<StartAutoMainCall>();
 		
 		int count = 0;
-		Search_CaseCats search_CaseCats = new Search_CaseCats();
 		
-		search_CaseCats.setCCAT("AUTO_ZERO_CONSUMPTION");
 		while(count < 100) {
 			StartAutoMainCall startAutoMainCall = new StartAutoMainCall();
-			startAutoMainCall.getSearch_CaseCats().add(search_CaseCats);
-			startAutoMainCalls.add(startAutoMainCall);
+			EMMA_COBJECTs EMMA_COBJECT = new EMMA_COBJECTs();
+ 			startAutoMainCall.getEMMA_COBJECTs().add(EMMA_COBJECT);
+ 			startAutoMainCalls.add(startAutoMainCall);
 			count ++;
 		}
 		
