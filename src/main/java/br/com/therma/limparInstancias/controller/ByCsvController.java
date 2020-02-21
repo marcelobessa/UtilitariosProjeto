@@ -72,7 +72,7 @@ public class ByCsvController {
 	    System.out.println(employee);
 	    return new ResponseEntity<String>(employee, HttpStatus.OK);
 	}
-	@PutMapping(value = "/EmmaCase/search")
+	@GetMapping(value = "/EmmaCase/search")
 	public ResponseEntity<List <StartAutoMainCall>> getExeptionCases() {
 		List<StartAutoMainCall> startAutoMainCalls = new ArrayList<StartAutoMainCall>();
 		
